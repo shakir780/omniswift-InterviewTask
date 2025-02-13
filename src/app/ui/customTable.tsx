@@ -4,12 +4,13 @@ import {
   useReactTable,
   getCoreRowModel,
   flexRender,
+  ColumnDef,
 } from "@tanstack/react-table";
 import Spinner from "./spinner";
 
 interface CustomTableProps<T extends object> {
   data: T[];
-  columns: any[];
+  columns: ColumnDef<T>[];
   loading: boolean;
 }
 

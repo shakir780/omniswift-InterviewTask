@@ -2,8 +2,9 @@
 
 import { useMemo } from "react";
 import { downloadResult } from "@/app/services/api";
-import { StudentsTableProps } from "@/app/types";
+import { Student, StudentsTableProps } from "@/app/types";
 import CustomTable from "@/app/ui/customTable";
+import { Row } from "@tanstack/react-table";
 
 const StudentsTable: React.FC<StudentsTableProps> = ({ data, loading }) => {
   const columns = useMemo(
@@ -18,7 +19,7 @@ const StudentsTable: React.FC<StudentsTableProps> = ({ data, loading }) => {
       {
         header: "Action",
         id: "action",
-        cell: ({ row }: { row: any }) => (
+        cell: ({ row }: { row: Row<Student> }) => (
           <button
             onClick={() => downloadResult(row.original.id)}
             className="bg-green-500 text-white px-4 py-3"
