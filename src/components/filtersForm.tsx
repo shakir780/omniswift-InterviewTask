@@ -64,7 +64,7 @@ const FiltersForm: React.FC<FiltersFormProps> = ({ onFilter }) => {
         Filter Student Table By:
       </span>
       <div className="flex lg:justify-start">
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 mt-[56px] gap-[48px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-[56px] gap-[48px]">
           <CustomSelect
             label="Age"
             options={ages}
@@ -92,7 +92,7 @@ const FiltersForm: React.FC<FiltersFormProps> = ({ onFilter }) => {
 
           <button
             onClick={handleSearch}
-            className="bg-[#46C35F] rounded-[4px] w-[312px] h-[50px] text-white"
+            className="bg-[#46C35F] rounded-[4px]  w-[200px] lg:w-[312px] h-[50px] text-white"
           >
             Search
           </button>

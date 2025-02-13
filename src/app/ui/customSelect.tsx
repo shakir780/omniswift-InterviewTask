@@ -18,7 +18,7 @@ const CustomSelect: React.FC<CustomSelectProps> = ({
   setSelected,
 }) => {
   return (
-    <div className="relative border rounded-lg w-[312px]">
+    <div className="relative border rounded-lg w-[200px] lg:w-[312px]">
       <Listbox value={selected} onChange={setSelected}>
         <div className="relative w-full">
           <label className="absolute z-30 -top-2 left-4 bg-white px-3 text-sm font-medium text-[#343434]">
